@@ -1,216 +1,170 @@
+<!-- 基础模板，默认所有页面的模板都由此开始 -->
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>关于我 | 华球球的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于我久违的利物浦球迷，知乎轻度上瘾患者，涉猎广泛，嘴笨心粗而不自知。
-爱好折腾，曾经贪图新鲜，慢慢脚踏实地一步一步前进中，学会一个一个实现自己的目标。永远在提醒自己，不要心急慢慢来，美好的事情往往来得比较晚。
-五流程序猿，涉猎广泛而无一精通，现在专注于前端开发。
-希望自己能够慢慢成长，目标是成为个全栈工程师。
-Ps：等我拍到张英俊的照片我再附上
-Contact邮箱：huajiewuxi@gmai">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="kaketsu.github.com/about/index.html">
-<meta property="og:site_name" content="华球球的博客">
-<meta property="og:description" content="关于我久违的利物浦球迷，知乎轻度上瘾患者，涉猎广泛，嘴笨心粗而不自知。
-爱好折腾，曾经贪图新鲜，慢慢脚踏实地一步一步前进中，学会一个一个实现自己的目标。永远在提醒自己，不要心急慢慢来，美好的事情往往来得比较晚。
-五流程序猿，涉猎广泛而无一精通，现在专注于前端开发。
-希望自己能够慢慢成长，目标是成为个全栈工程师。
-Ps：等我拍到张英俊的照片我再附上
-Contact邮箱：huajiewuxi@gmai">
-<meta property="og:updated_time" content="2017-02-15T01:54:49.130Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="关于我久违的利物浦球迷，知乎轻度上瘾患者，涉猎广泛，嘴笨心粗而不自知。
-爱好折腾，曾经贪图新鲜，慢慢脚踏实地一步一步前进中，学会一个一个实现自己的目标。永远在提醒自己，不要心急慢慢来，美好的事情往往来得比较晚。
-五流程序猿，涉猎广泛而无一精通，现在专注于前端开发。
-希望自己能够慢慢成长，目标是成为个全栈工程师。
-Ps：等我拍到张英俊的照片我再附上
-Contact邮箱：huajiewuxi@gmai">
-  
-    <link rel="alternate" href="/atom.xml" title="华球球的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>华球球的博客</title>
+		<meta name="description" content="Multi-Level Push Menu"/>
+		<meta name="author" content="heredom" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/css/icons.css" />
+  		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<div class="home-intro">
+							<h2>
+								华球球
+							</h2>
+							<p>Web前端知识的自我积累</p>
+						</div>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-archive" style="padding-right:15px;"></i>归档</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>归档</h2>
+									</div>
+									<ul>
+										<form id="search-form" action="">
+											<input type="text" class="search search-archive" placeholder="Search.."/>
+										</form>
+										
+										<li class="search-archive-li">
+											<a href="/2017/02/14/webpack学习指南/">webpack学习指南</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/06/12/test2/">test2</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/06/12/test/">test</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/06/06/my-new-post/">my new post</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2015/11/06/hello-world/">Hello World</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-bookmark" style="padding-right:15px;"></i>分类</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>分类</h2>
+									</div>
+									<ul>
+										
+										<li>
+											<a href="/categories/web前端/">&nbsp;&nbsp;&nbsp;web前端</a>
+										</li>
+										
+										<li>
+											<a href="/categories/生活/">&nbsp;&nbsp;&nbsp;生活</a>
+										</li>
+										
+										<li>
+											<a href="/categories/随笔/">&nbsp;&nbsp;&nbsp;随笔</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-tags" style="padding-right:15px;"></i>标签</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>标签</h2>
+									</div>
+									<ul>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/about"><i class="fa fa-user" style="padding-right:15px;"></i>关于我</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- /mp-menu -->
+
+				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+					<div class="scroller-inner">
+						<!-- Top Navigation -->
+						<div class="content clearfix">
+							<div class="block clearfix">
+								<p>
+									<a href="#" id="trigger" class="menu-trigger">
+									</a>
+									<a href="/" id="nexus-back">华球球的博客</a>
+								</p>
+							</div>
+						</div>
+					</div><!-- /scroller-inner -->
+						
+
+						
+<!-- -->
+<!--<body class="post-template">-->
+<!---->
   
 
-</head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">华球球的博客</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="kaketsu.github.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/about/index.html" class="article-date">
-  <time datetime="2016-02-01T12:05:54.000Z" itemprop="datePublished">2016-02-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      关于我
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>久违的利物浦球迷，知乎轻度上瘾患者，涉猎广泛，嘴笨心粗而不自知。</p>
+<main class="content" role="main">
+    <article class="post" >
+        <section class="post-content">
+            <h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>久违的利物浦球迷，知乎轻度上瘾患者，涉猎广泛，嘴笨心粗而不自知。</p>
 <p>爱好折腾，曾经贪图新鲜，慢慢脚踏实地一步一步前进中，学会一个一个实现自己的目标。永远在提醒自己，不要心急慢慢来，美好的事情往往来得比较晚。</p>
 <p>五流程序猿，涉猎广泛而无一精通，现在专注于前端开发。</p>
 <p>希望自己能够慢慢成长，目标是成为个全栈工程师。</p>
 <p>Ps：等我拍到张英俊的照片我再附上</p>
 <h2 id="Contact"><a href="#Contact" class="headerlink" title="Contact"></a>Contact</h2><p>邮箱：huajiewuxi@gmail.com<br>微博：<a href="http://weibo.com/u/2266895562" target="_blank" rel="external">华球球要奋斗</a><br>github: <a href="https://github.com/kaketsu" target="_blank" rel="external">kaketsu</a></p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/about/index.html" data-id="ciz6eai7t000aloum9yd5iq3f" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-  
-</article>
+        </section>
+    </article>
+</main>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Kategorier</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web前端/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
-    </div>
-  </div>
+  					<footer class="site-footer">
+						<div class="inner">
+							<section class="copyright"><a href="/"></a> &copy; 华球球的博客 2016</section>
+							<section class="poweredby">由<a target="_blank" href="http://hexo.io/">Hexo   </a>发布 | 主题为 <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">heredom</a></section>
+						</div>
+					</footer>
+				</div><!-- /scroller -->
+
+			</div><!-- /pusher -->
+		</div><!-- /container -->
+	</body>
+</html>
+  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.quicksearch/2.3.1/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/js/classie.js"></script>
+<script type="text/javascript" src="/js/mlpushmenu.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/02/14/webpack学习指南/">webpack学习指南</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/12/test2/">test2</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/12/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/06/my-new-post/">my new post</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-  </div>
 </body>
 </html>

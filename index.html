@@ -1,437 +1,385 @@
+<!-- 基础模板，默认所有页面的模板都由此开始 -->
+
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>华球球的博客</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="华球球的博客">
-<meta property="og:url" content="kaketsu.github.com/index.html">
-<meta property="og:site_name" content="华球球的博客">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="华球球的博客">
-  
-    <link rel="alternate" href="/atom.xml" title="华球球的博客" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+    <head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>华球球的博客</title>
+		<meta name="description" content="Multi-Level Push Menu"/>
+		<meta name="author" content="heredom" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/css/icons.css" />
+  		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
 
-</head>
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<div class="home-intro">
+							<h2>
+								华球球
+							</h2>
+							<p>Web前端知识的自我积累</p>
+						</div>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-archive" style="padding-right:15px;"></i>归档</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>归档</h2>
+									</div>
+									<ul>
+										<form id="search-form" action="">
+											<input type="text" class="search search-archive" placeholder="Search.."/>
+										</form>
+										
+										<li class="search-archive-li">
+											<a href="/2017/02/14/webpack学习指南/">webpack学习指南</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/06/12/test2/">test2</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/06/12/test/">test</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/06/06/my-new-post/">my new post</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2015/11/06/hello-world/">Hello World</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-bookmark" style="padding-right:15px;"></i>分类</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>分类</h2>
+									</div>
+									<ul>
+										
+										<li>
+											<a href="/categories/web前端/">&nbsp;&nbsp;&nbsp;web前端</a>
+										</li>
+										
+										<li>
+											<a href="/categories/生活/">&nbsp;&nbsp;&nbsp;生活</a>
+										</li>
+										
+										<li>
+											<a href="/categories/随笔/">&nbsp;&nbsp;&nbsp;随笔</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-tags" style="padding-right:15px;"></i>标签</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>标签</h2>
+									</div>
+									<ul>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/about"><i class="fa fa-user" style="padding-right:15px;"></i>关于我</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- /mp-menu -->
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">华球球的博客</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+					<div class="scroller-inner">
+						<!-- Top Navigation -->
+						<div class="content clearfix">
+							<div class="block clearfix">
+								<p>
+									<a href="#" id="trigger" class="menu-trigger">
+									</a>
+									<a href="/" id="nexus-back">华球球的博客</a>
+								</p>
+							</div>
+						</div>
+					</div><!-- /scroller-inner -->
+						
+
+						
+<!-- -->
+<!--<body class="home-template">-->
+<!---->
+  <!-- 首页模板 -->
+
+<main class="main">
+
+    
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title"><a data-pjax href="/2017/02/14/webpack学习指南/">webpack学习指南</a>
+            </h1>
+
+            <div class="post-meta">
+                发表于
+                <time datetime="2017-02-14T13:02:34.000Z"
+                      itemprop="datePublished">2017-02-14</time>
+                | 分类于 
+               <div class="tag-tile" style="display:inline-block;">
+                    
+                    
+                    <a data-pjax href='/categories/web前端/'>web前端</a>
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                ...
+                
+            </p>
+            
+            <p class="read-more">
+                <a data-pjax href="/2017/02/14/webpack学习指南/"
+                   class="excerpt-link">阅读全文 »</a>
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title"><a data-pjax href="/2016/06/12/test2/">test2</a>
+            </h1>
+
+            <div class="post-meta">
+                发表于
+                <time datetime="2016-06-12T05:28:05.000Z"
+                      itemprop="datePublished">2016-06-12</time>
+                | 分类于 
+               <div class="tag-tile" style="display:inline-block;">
+                    
+                    
+                    <a data-pjax href='/categories/随笔/'>随笔</a>
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                ...
+                
+            </p>
+            
+            <p class="read-more">
+                <a data-pjax href="/2016/06/12/test2/"
+                   class="excerpt-link">阅读全文 »</a>
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title"><a data-pjax href="/2016/06/12/test/">test</a>
+            </h1>
+
+            <div class="post-meta">
+                发表于
+                <time datetime="2016-06-12T05:25:57.000Z"
+                      itemprop="datePublished">2016-06-12</time>
+                | 分类于 
+               <div class="tag-tile" style="display:inline-block;">
+                    
+                    
+                    <a data-pjax href='/categories/随笔/'>随笔</a>
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                1. 块级作用域
+使用let代替var
+
+123456if (true) &#123;  let x = 'hello';&#125;for (let i = 0; i &lt; 10; i++) &#123;  console.log(i);&#125;
+上面代码如果用var替代let，实际上就声明了一个全局变量，这显然不是本意。
+1234if(true) &#123;  console.log(x);   let x = 'hell...
+                
+            </p>
+            
+            <p class="read-more">
+                <a data-pjax href="/2016/06/12/test/"
+                   class="excerpt-link">阅读全文 »</a>
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title"><a data-pjax href="/2016/06/06/my-new-post/">my new post</a>
+            </h1>
+
+            <div class="post-meta">
+                发表于
+                <time datetime="2016-06-06T08:59:19.000Z"
+                      itemprop="datePublished">2016-06-06</time>
+                | 分类于 
+               <div class="tag-tile" style="display:inline-block;">
+                    
+                    
+                    <a data-pjax href='/categories/生活/'>生活</a>
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                ...
+                
+            </p>
+            
+            <p class="read-more">
+                <a data-pjax href="/2016/06/06/my-new-post/"
+                   class="excerpt-link">阅读全文 »</a>
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title"><a data-pjax href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
+            </h1>
+
+            <div class="post-meta">
+                发表于
+                <time datetime="2016-02-16T14:49:31.000Z"
+                      itemprop="datePublished">2016-02-16</time>
+                | 分类于 
+               <div class="tag-tile" style="display:inline-block;">
+                    
+                    
+                    <a data-pjax href='/categories/web前端/'>web前端</a>
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                在我开始使用Markdown的过程中，经常忘记Markdown的语法，于是为了方便速查，将一些常见的语法记下了。
+为什么使用MarkdownMarkdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本...
+                
+            </p>
+            
+            <p class="read-more">
+                <a data-pjax href="/2016/02/16/Markdown常用语法/"
+                   class="excerpt-link">阅读全文 »</a>
+            </p>
+            
+        </section>
+    </article>
+    
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title"><a data-pjax href="/2015/11/06/hello-world/">Hello World</a>
+            </h1>
+
+            <div class="post-meta">
+                发表于
+                <time datetime="2015-11-05T16:00:00.000Z"
+                      itemprop="datePublished">2015-11-06</time>
+                | 分类于 
+               <div class="tag-tile" style="display:inline-block;">
+                    
+                    
+                    <a data-pjax href='/categories/web前端/'>web前端</a>
+                    
+                    
+                </div>
+            </div>
+        </header>
+        <section class="post-excerpt">
+            <p>
+                
+                开始在自己买的域名和租用的服务器到期后，不想在用WordPress来搭建自己的个人博客，在这个时候看到可以通过github page创建静态博客，于是就在网上找了很多相关资料。在对比了Hexo以及Jekyll等框架之后，最终选择了Hexo来搭建自己的page。
+曾经在网上看到这么一段话，发现挺有道理的：
+
+第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。...
+                
+            </p>
+            
+            <p class="read-more">
+                <a data-pjax href="/2015/11/06/hello-world/"
+                   class="excerpt-link">阅读全文 »</a>
+            </p>
+            
+        </section>
+    </article>
+    
+    <nav class="pagination" role="pagination">
         
-          <a class="main-nav-link" href="/">Home</a>
+        <span class="page-number">Page 1 of 1</span>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Søk"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="kaketsu.github.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-webpack学习指南" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/14/webpack学习指南/" class="article-date">
-  <time datetime="2017-02-14T13:02:34.000Z" itemprop="datePublished">2017-02-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web前端/">web前端</a>
-  </div>
+    </nav>
+</main>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/14/webpack学习指南/">webpack学习指南</a>
-    </h1>
-  
+  					<footer class="site-footer">
+						<div class="inner">
+							<section class="copyright"><a href="/"></a> &copy; 华球球的博客 2016</section>
+							<section class="poweredby">由<a target="_blank" href="http://hexo.io/">Hexo   </a>发布 | 主题为 <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">heredom</a></section>
+						</div>
+					</footer>
+				</div><!-- /scroller -->
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/2017/02/14/webpack学习指南/" data-id="ciz6eai7t000dloum2c4h7eun" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
+			</div><!-- /pusher -->
+		</div><!-- /container -->
+	</body>
+</html>
+  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.quicksearch/2.3.1/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/js/classie.js"></script>
+<script type="text/javascript" src="/js/mlpushmenu.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
 
 
-  
-    <article id="post-test2" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/12/test2/" class="article-date">
-  <time datetime="2016-06-12T05:28:05.000Z" itemprop="datePublished">2016-06-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/12/test2/">test2</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/2016/06/12/test2/" data-id="ciz6eai7d0000loumkbt42rtz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-test" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/12/test/" class="article-date">
-  <time datetime="2016-06-12T05:25:57.000Z" itemprop="datePublished">2016-06-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/随笔/">随笔</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/12/test/">test</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-块级作用域"><a href="#1-块级作用域" class="headerlink" title="1. 块级作用域"></a>1. 块级作用域</h3><ul>
-<li><strong>使用let代替var</strong></li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</div><div class="line">  <span class="keyword">let</span> x = <span class="string">'hello'</span>;</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</div><div class="line">  <span class="built_in">console</span>.log(i);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>上面代码如果用var替代let，实际上就声明了一个全局变量，这显然不是本意。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="literal">true</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(x); </div><div class="line">  <span class="keyword">let</span> x = <span class="string">'hello'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>上面代码如果使用var替代let，console.log那一行就不会报错，而是会输出undefined，因为变量声明提升到代码块的头部。这违反了变量先声明后使用的原则。</p>
-<p>所以，建议不再使用var命令，而是使用let命令取代。</p>
-<ul>
-<li><strong>全局常量和线程安全</strong></li>
-</ul>
-<p>在let和const中优先使用const，尤其是全局环境中不应使用变量，应该使用常量。<br>所有的函数都应该设置为常量。</p>
-<h3 id="2-字符串"><a href="#2-字符串" class="headerlink" title="2. 字符串"></a>2. 字符串</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> a = <span class="string">'foobar'</span>;</div><div class="line"><span class="keyword">const</span> b = <span class="string">`foo<span class="subst">$&#123;a&#125;</span>bar`</span>;</div><div class="line"><span class="keyword">const</span> c = <span class="string">'foobar'</span>;</div></pre></td></tr></table></figure>
-<p>静态字符串使用单引号，动态字符串使用反引号。</p>
-<h3 id="3-解构赋值"><a href="#3-解构赋值" class="headerlink" title="3. 解构赋值"></a>3. 解构赋值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; ***标题***</div><div class="line"></div><div class="line"> ##</div><div class="line">const arr = [1, 2, 3, 4];</div><div class="line"></div><div class="line">// bad</div><div class="line">const first = arr[0];</div><div class="line">const second = arr[1];</div><div class="line"></div><div class="line">// good</div><div class="line">const [first, second] = arr;</div></pre></td></tr></table></figure>
-<p>使用数组成员对变量进行赋值的时候，优先使用解构赋值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFullName</span>(<span class="params">user</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> firstName = user.firstName;</div><div class="line">  <span class="keyword">const</span> lastName = user.lastName;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFullName</span>(<span class="params">obj</span>) </span>&#123;</div><div class="line">  <span class="keyword">const</span> &#123; firstName, lastName &#125; = obj;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// best</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFullName</span>(<span class="params">&#123; firstName, lastName &#125;</span>) </span>&#123;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>函数的参数如果是对象的成员，优先使用解构赋值。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">processInput</span>(<span class="params">input</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> [left, right, top, bottom];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">processInput</span>(<span class="params">input</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> &#123; left, right, top, bottom &#125;;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">const</span> &#123; left, right &#125; = processInput(input);</div></pre></td></tr></table></figure>
-<p>如果函数返回多个值，优先使用对象的解构赋值，而不是数组的解构赋值。这样便于以后添加返回值，以及更改返回值的顺序。</p>
-<h3 id="4-对象"><a href="#4-对象" class="headerlink" title="4. 对象"></a>4. 对象</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">const</span> obj = &#123;&#125;;</div><div class="line">obj.x = <span class="number">3</span>;</div><div class="line"></div><div class="line"><span class="comment">// if reshape unavoidable</span></div><div class="line"><span class="keyword">const</span> obj = &#123;&#125;;</div><div class="line"><span class="built_in">Object</span>.assign(obj, &#123; <span class="attr">x</span>: <span class="number">3</span> &#125;);</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">const</span> obj = &#123; <span class="attr">x</span>: <span class="literal">null</span> &#125;;</div><div class="line">a.x = <span class="number">3</span>;</div></pre></td></tr></table></figure>
-<p>对象尽量静态化，一旦定义之后，最好不要随意添加新的属性，如果需要的话，使用Object.assgin方法。</p>
-<p>waiting……<br>属性表达式来动态定义属性。</p>
-<h3 id="5-数组"><a href="#5-数组" class="headerlink" title="5. 数组"></a>5. 数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> foo = <span class="built_in">document</span>.querySelectorAll(<span class="string">'.foo'</span>);</div><div class="line"><span class="keyword">const</span> nodes = <span class="built_in">Array</span>.from(foo);</div></pre></td></tr></table></figure>
-<p>使用Array.from方法，将类似数组的对象转为数组。<br>粗体文本</p>
-<blockquote>
-<p><em>Tip.</em>  （…）为扩展运算符</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// bad</span></div><div class="line"><span class="keyword">const</span> len = items.length;</div><div class="line"><span class="keyword">const</span> itemsCopy = [];</div><div class="line"><span class="keyword">let</span> i;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++) &#123;</div><div class="line">  itemsCopy[i] = items[i];</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// good</span></div><div class="line"><span class="keyword">const</span> itemsCopy = [...items];</div></pre></td></tr></table></figure>
-<p>使用扩展运算符（…）拷贝数组。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/2016/06/12/test/" data-id="ciz6eai7e0003loum39t7z7ze" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-my-new-post" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/06/06/my-new-post/" class="article-date">
-  <time datetime="2016-06-06T08:59:19.000Z" itemprop="datePublished">2016-06-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/生活/">生活</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/06/my-new-post/">my new post</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/2016/06/06/my-new-post/" data-id="ciz6eai7e0009loum7gcvisx9" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Markdown常用语法" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/16/Markdown常用语法/" class="article-date">
-  <time datetime="2016-02-16T14:49:31.000Z" itemprop="datePublished">2016-02-16</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web前端/">web前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在我开始使用Markdown的过程中，经常忘记Markdown的语法，于是为了方便速查，将一些常见的语法记下了。</p>
-<h3 id="为什么使用Markdown"><a href="#为什么使用Markdown" class="headerlink" title="为什么使用Markdown"></a>为什么使用Markdown</h3><p>Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。<br>常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/2016/02/16/Markdown常用语法/" data-id="ciz6eai7e0001loumxv89quoh" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/06/hello-world/" class="article-date">
-  <time datetime="2015-11-05T16:00:00.000Z" itemprop="datePublished">2015-11-06</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/web前端/">web前端</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/06/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>在自己买的域名和租用的服务器到期后，不想在用WordPress来搭建自己的个人博客，<br>在这个时候看到可以通过github page创建静态博客，于是就在网上找了很多相关资料。<br>在对比了Hexo以及Jekyll等框架之后，最终选择了Hexo来搭建自己的page。</p>
-<p>曾经在网上看到这么一段话，发现挺有道理的：</p>
-<blockquote>
-<p>第一阶段，刚接触Blog，觉得很新鲜，试着选择一个免费空间来写。<br>第二阶段，发现免费空间限制太多，就自己购买域名和空间，搭建独立博客。<br>第三阶段，觉得独立博客的管理太麻烦，最好在保留控制权的前提下，让别人来管，自己只负责写文章。</p>
-</blockquote>
-<p>作为一个博客新人，折腾自己的独立博客也算是闲暇时间的一种消遣。</p>
-<p>博客的主题是自己从网上找了好多，都没有多少满意的，所以根据常逛的网站，自己设计自己开发。<br>详情请看<a href="https://github.com/kaketsu/Heredom" target="_blank" rel="external">heredom</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="kaketsu.github.com/2015/11/06/hello-world/" data-id="ciz6eai7t000bloumycf47veu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Kategorier</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web前端/">web前端</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/随笔/">随笔</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Arkiv</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Siste innlegg</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/02/14/webpack学习指南/">webpack学习指南</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/12/test2/">test2</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/12/test/">test</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/06/my-new-post/">my new post</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-  </div>
 </body>
 </html>
