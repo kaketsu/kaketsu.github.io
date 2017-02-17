@@ -533,7 +533,7 @@ a:focus {
 }
 
 .post-content li {
-    font-size: 18px;
+    font-size: 1em;
 }
 
 .tag-tile a {
@@ -654,7 +654,7 @@ a:focus {
 .excerpt-link {
     color: #555;
     font-size: 0.9em;
-    background: #fff;
+    background: #f9f9f9;
     border-radius: 2px;
     border-color: #37474f;
 	display: inline-block;
@@ -792,3 +792,4 @@ a:focus {
 .post-footer .share a:hover {
     color: #50585D;
 }
+
