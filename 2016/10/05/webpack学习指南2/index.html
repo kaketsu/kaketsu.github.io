@@ -172,6 +172,7 @@
 <p>我们可以添加个新的js文件，使用es6的语法</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  greet() &#123;</div><div class="line">    <span class="keyword">let</span> say = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</div><div class="line">    say.textContent = <span class="string">"Hi, my name is "</span> + <span class="keyword">this</span>.name;</div><div class="line">    <span class="keyword">return</span> say;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;Person&#125;</div></pre></td></tr></table></figure>
 <p>可以在页面中看到我们想要看到的结果。</p>
+<p>以上代码在<a href="https://github.com/kaketsu/webpack-eg" target="_blank" rel="external">webpack-eg</a></p>
 
         </section>
         <hr/>
