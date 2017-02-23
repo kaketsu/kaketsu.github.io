@@ -146,11 +146,11 @@
 <main class="content" role="main">
     <article class="post" >
     <span class="post-meta">
-        <h1 class="post-title" style="margin: 14px 0;color:#50585D">Markdown常用语法</h1>
+        <h1 class="post-title" style="margin: 14px 0;color:#50585D">webpack学习指南2</h1>
         <div class="post-meta">
             发表于
-            <time datetime="2016-02-16T14:49:31.000Z"
-                    itemprop="datePublished">2016-02-16</time>
+            <time datetime="2016-10-04T16:00:00.000Z"
+                    itemprop="datePublished">2016-10-05</time>
             | 分类于 
             <div class="tag-tile" style="display:inline-block;">
                 
@@ -163,17 +163,24 @@
     </span>
 
         <section class="post-content">
-            <p>在我开始使用Markdown的过程中，经常忘记Markdown的语法，于是为了方便速查，将一些常见的语法记下了。</p>
-<h3 id="为什么使用Markdown"><a href="#为什么使用Markdown" class="headerlink" title="为什么使用Markdown"></a>为什么使用Markdown</h3><p>Markdown 是一种轻量级的「标记语言」，它的优点很多，目前也被越来越多的写作爱好者，撰稿者广泛使用。看到这里请不要被「标记」、「语言」所迷惑，Markdown 的语法十分简单。<br>常用的标记符号也不超过十个，这种相对于更为复杂的 HTML 标记语言来说，Markdown 可谓是十分轻量的，学习成本也不需要太多，且一旦熟悉这种语法规则，会有一劳永逸的效果。</p>
+            <h2 id="Loaders"><a href="#Loaders" class="headerlink" title="Loaders"></a>Loaders</h2><p>Loaders是webpack中最让人主要的功能之一了。通过使用不同的loader，webpack通过调用外部的脚本或工具可以对各种各样的格式的文件进行处理，比如说把下一代的JS文件（ES6，ES7)转换为现代浏览器可以识别的JS文件。或者说对React的开发而言，合适的Loaders可以把React的JSX文件转换为JS文件。</p>
+<p>不同的Loaders需要单独安装，并且需要在webpack.config.js下的modules关键字下进行配置，Loaders的配置选项包括以下几方面：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>:&#123;</div><div class="line">  <span class="attr">loaders</span>:[</div><div class="line">  &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.css$/</span>, <span class="comment">// 一个匹配loaders所处理的文件的拓展名的正则表达式（必须）</span></div><div class="line">      loader: <span class="string">'style-loader!css-loader'</span> <span class="comment">//loader的名称</span></div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.less$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'style-loader!css-loader'</span></div><div class="line">  &#125;,</div><div class="line">  &#123;</div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.js$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'babel-loader'</span>,</div><div class="line">      <span class="attr">exclude</span>: <span class="regexp">/node_modules/</span> <span class="comment">// 不用转换的node_modules文件夹</span></div><div class="line">      query: &#123;</div><div class="line">          <span class="attr">presets</span>: [<span class="string">'es2015'</span>]</div><div class="line">      &#125;</div><div class="line">  &#125;,</div><div class="line">  &#123; </div><div class="line">      <span class="attr">test</span>: <span class="regexp">/\.(html|tpl)$/</span>,</div><div class="line">      <span class="attr">loader</span>: <span class="string">'html-loader'</span></div><div class="line">  &#125;]</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>我们要在页面中引入一个 CSS 文件 style.css，首页将 style.css 也看成是一个模块，然后用 css-loader 来读取它，再用 style-loader 把它插入到页面中</p>
+<p>我们可以在src下添加个main.css的文件，然后在入口文件中，添加引用该文件。<br>require(‘./main.css’);</p>
+<p>添加ES6的支持<br>我们需要用babel-loader来进行支持<br>首先需要安装 npm install babel-loader babel-core babel-preset-es2015 –save-dev<br>并且在loader中添加入上图的babel-loader，es2015这个参数是babel的plugin，可以支持各种最新的es6的特性。</p>
+<p>我们可以添加个新的js文件，使用es6的语法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</div><div class="line">  <span class="keyword">constructor</span>(name) &#123;</div><div class="line">    <span class="keyword">this</span>.name = name;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  greet() &#123;</div><div class="line">    <span class="keyword">let</span> say = <span class="built_in">document</span>.createElement(<span class="string">'p'</span>);</div><div class="line">    say.textContent = <span class="string">"Hi, my name is "</span> + <span class="keyword">this</span>.name;</div><div class="line">    <span class="keyword">return</span> say;</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">export</span> &#123;Person&#125;</div></pre></td></tr></table></figure>
+<p>可以在页面中看到我们想要看到的结果。</p>
 
         </section>
         <hr/>
         <nav class="pagination" style="width:auto" role="pagination">
             
-            <a data-pjax class="newer-posts" href="/2016/09/14/用vue来构建项目/">上一篇</a>
+            <a data-pjax class="newer-posts" href="/2017/02/05/2017年新的展望/">上一篇</a>
             
             
-            <a data-pjax class="older-posts" href="/2015/11/06/hello-world/">下一篇</a>
+            <a data-pjax class="older-posts" href="/2016/10/04/webpack学习指南/">下一篇</a>
             
         </nav>
         <br/>

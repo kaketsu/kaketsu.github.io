@@ -1,0 +1,237 @@
+<!-- 基础模板，默认所有页面的模板都由此开始 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>华球球的博客</title>
+		<meta name="description" content="Multi-Level Push Menu"/>
+		<meta name="author" content="heredom" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<div class="home-intro">
+							<h2>
+								华球球
+							</h2>
+							<p>Web前端知识的自我积累</p>
+						</div>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-archive" style="padding-right:15px;"></i>归档</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>归档</h2>
+									</div>
+									<ul>
+										<form id="search-form" action="">
+											<input type="text" class="search search-archive" placeholder="Search.."/>
+										</form>
+										
+										<li class="search-archive-li">
+											<a href="/2017/02/21/yarn中文文档来了/">yarn中文文档来了</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2017/02/05/2017年新的展望/">2017年新的展望</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/10/05/webpack学习指南2/">webpack学习指南2</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/10/04/webpack学习指南/">webpack学习指南</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/09/15/用vue来构建项目(2)/">用vue来构建项目2</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/09/14/用vue来构建项目/">用vue来构建项目</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2015/11/06/hello-world/">Hello World</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-bookmark" style="padding-right:15px;"></i>分类</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>分类</h2>
+									</div>
+									<ul>
+										
+										<li>
+											<a href="/categories/web前端/">&nbsp;&nbsp;&nbsp;web前端</a>
+										</li>
+										
+										<li>
+											<a href="/categories/随笔/">&nbsp;&nbsp;&nbsp;随笔</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-tags" style="padding-right:15px;"></i>标签</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>标签</h2>
+									</div>
+									<ul>
+										
+										<li>
+											<a href="/tags/Yarn/">&nbsp;&nbsp;&nbsp;Yarn</a>
+										</li>
+										
+										<li>
+											<a href="/tags/vue/">&nbsp;&nbsp;&nbsp;vue</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/about"><i class="fa fa-user" style="padding-right:15px;"></i>关于我</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- /mp-menu -->
+
+				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+					<div class="scroller-inner">
+						<!-- Top Navigation -->
+						<div class="content clearfix">
+							<div class="block clearfix">
+								<p>
+									<a href="#" id="trigger" class="menu-trigger">
+									</a>
+									<a href="/" id="nexus-back">华球球的博客</a>
+								</p>
+							</div>
+						</div>
+					</div><!-- /scroller-inner -->
+						
+
+						
+<!-- -->
+<!--<body class="post-template">-->
+<!---->
+  
+
+<main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+        <h1 class="post-title" style="margin: 14px 0;color:#50585D">webpack学习指南</h1>
+        <div class="post-meta">
+            发表于
+            <time datetime="2016-10-03T16:00:00.000Z"
+                    itemprop="datePublished">2016-10-04</time>
+            | 分类于 
+            <div class="tag-tile" style="display:inline-block;">
+                
+                
+                <a data-pjax href='/categories/web前端/'>web前端</a>
+                
+                
+            </div>
+        </div>
+    </span>
+
+        <section class="post-content">
+            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>关于webpack，在项目中也用了一些时间了，在vue-cli中也使用了webpack来作为打包工具，所以已经基本有所了解了。<br>现在准备写一些简单的例子来整理下webpack的使用方法，现在准备搜集一些常用的webpack插件。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>先装好node和npm，因为webpack是一个基于node的项目，然后只需要安装Webpack。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 安装Webpack</span></div><div class="line">npm install -g webpack</div></pre></td></tr></table></figure>
+<h2 id="初次使用"><a href="#初次使用" class="headerlink" title="初次使用"></a>初次使用</h2><p>下面我们就一步一步来新建一个简单的项目</p>
+<p>webpack原生直接支持AMD和CommonJS两种格式，当然你也可以用ES6的风格。</p>
+<p>Greeter.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateContent</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.createElement(<span class="string">'h2'</span>);</div><div class="line">  element.innerHTML = <span class="string">"Hello world"</span>;</div><div class="line">  <span class="keyword">return</span> element;</div><div class="line">&#125;</div><div class="line"><span class="built_in">module</span>.exports = generateContent;</div></pre></td></tr></table></figure></p>
+<p>main.js<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Greeter = <span class="built_in">require</span>(<span class="string">'./Greeter'</span>);</div><div class="line"><span class="keyword">var</span> body = <span class="built_in">document</span>.body;</div><div class="line">body.appendChild(Greeter());</div></pre></td></tr></table></figure></p>
+<p>正式使用Webpack</p>
+<p>webpack可以在终端中使用，其最基础的命令是</p>
+<ul>
+<li>webpack {entry file/入口文件} {destination for bundled file/存放bundle.js的地方}</li>
+</ul>
+<p>可以看出webpack同时编译了main.js 和Greeter,js。<br>这下可以成功的使用Webpack打包了一个文件了，但是这样还是太复杂了，下面我们要用配置文件来使用webpack</p>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>webpack的配置文件主要分为三大块</p>
+<ol>
+<li>entry 入口文件 让webpack用哪个文件作为项目的入口</li>
+<li>output 出口 让webpack把处理完成的文件放在哪里</li>
+<li>module 模块 要用什么不同的模块来处理各种类型的文件</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">module</span>.exports = &#123;</div><div class="line">  <span class="comment">//项目的文件夹 可以直接用文件夹名称 默认会找index.js 也可以确定是哪个文件名字</span></div><div class="line">  entry:<span class="string">'./src/main.js'</span>,</div><div class="line">  <span class="comment">//输出的文件名 合并以后的js会命名为bundle.js</span></div><div class="line">  output: &#123;</div><div class="line">    <span class="attr">path</span>:<span class="string">'./dist'</span></div><div class="line">    filename: <span class="string">'bundle.js'</span></div><div class="line">  &#125;,</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>现在如果你需要打包文件只需要在终端里你运行webpack命令就可以了.</p>
+<p>现在开始配置webpack，目标是把这两个js文件合并成一个文件. 我们可以自己在build文件夹里面手动建一个index.html文件夹，然后再把合并以后的js引用在里面。</p>
+<p>但是这样有些麻烦，所以我们这里安装一个html-webpack-plugin插件，可以自动快速的帮我们生成HTML。</p>
+<h2 id="构建本地服务器"><a href="#构建本地服务器" class="headerlink" title="构建本地服务器"></a>构建本地服务器</h2><p>使用<a href="https://webpack.js.org/configuration/dev-server/#devserver" target="_blank" rel="external">webpack-dev-server</a>来构建本地服务器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">devServer: &#123;</div><div class="line">   <span class="attr">contentBase</span>: __dirname+<span class="string">"/dist"</span>, <span class="comment">//本地服务器所加载的页面所在的目录</span></div><div class="line">   historyApiFallback: <span class="literal">true</span>, <span class="comment">//不跳转</span></div><div class="line">   inline: <span class="literal">true</span>, <span class="comment">//实时刷新</span></div><div class="line">   hot: <span class="literal">true</span>,</div><div class="line">   <span class="attr">compress</span>: <span class="literal">true</span></div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<p>然后再package.json里面配置一下运行的命令,npm支持自定义一些命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&quot;scripts&quot;: &#123;</div><div class="line">  &quot;start&quot;: &quot;webpack-dev-server --hot --inline&quot;</div><div class="line">&#125;,</div></pre></td></tr></table></figure>
+<p>在项目根目录下输入npm start,在浏览器里面输入 <a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a> ，就会发现出现了我们想要的内容。同样支持热更新，当我们改变了js中的内容之后，页面也会自动刷新。</p>
+
+        </section>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
+            
+            <a data-pjax class="newer-posts" href="/2016/10/05/webpack学习指南2/">上一篇</a>
+            
+            
+            <a data-pjax class="older-posts" href="/2016/09/15/用vue来构建项目(2)/">下一篇</a>
+            
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
+        </section>
+
+
+    </article>
+</main>
+
+  					<footer class="site-footer">
+						<div class="inner">
+							<section class="copyright"><a href="/"></a> &copy; 华球球的博客 2016</section>
+							<section class="poweredby">由<a target="_blank" href="http://hexo.io/">Hexo   </a>发布 | 主题为 <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">heredom</a></section>
+						</div>
+					</footer>
+				</div><!-- /scroller -->
+
+			</div><!-- /pusher -->
+		</div><!-- /container -->
+	</body>
+</html>
+  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.quicksearch/2.3.1/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/js/classie.js"></script>
+<script type="text/javascript" src="/js/mlpushmenu.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+</body>
+</html>
