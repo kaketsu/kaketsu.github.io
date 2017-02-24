@@ -143,55 +143,55 @@
 
 						
 <!-- -->
-<!--<body class="home-template">-->
+<!--<body class="post-template">-->
 <!---->
-  <!-- 首页模板 -->
+  
 
-<main class="main">
-
-    
-    <article class="post">
-
-        <header class="post-header">
-            <h1 class="post-title"><a data-pjax href="/2017/02/05/2017年新的展望/">2017年新的展望</a>
-            </h1>
-
-            <div class="post-meta">
-                发表于
-                <time datetime="2017-02-04T16:00:00.000Z"
-                      itemprop="datePublished">2017-02-05</time>
-                | 分类于 
-               <div class="tag-tile" style="display:inline-block;">
-                    
-                    
-                    <a data-pjax href='/categories/随笔/'>随笔</a>
-                    
-                    
-                </div>
+<main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+        <h1 class="post-title" style="margin: 14px 0;color:#50585D">网站页面3D悬浮效果</h1>
+        <div class="post-meta">
+            发表于
+            <time datetime="2016-12-17T16:00:00.000Z"
+                    itemprop="datePublished">2016-12-18</time>
+            | 分类于 
+            <div class="tag-tile" style="display:inline-block;">
+                
+                
+                <a data-pjax href='/categories/web前端/'>web前端</a>
+                
+                
             </div>
-        </header>
-        <section class="post-excerpt">
-            <p>
-                
-                掐指一算，毕业也已经三年了。从2013年懵懵懂懂得从大学毕业，到现在慢慢觉得进入正轨。
-学习2016年在工作之余接了个项目做，本来想能够利用业余时间赚点外快旅游钱，结果项目从一开始就需求不明确，做到一半的时候反而出现需求晚于开发的情况。然后等到我们交出几个版本之后，却反而需要我们推倒以前的逻辑，导致项目耗时远远大于原来的预计时间。
-另外，程序员是需要不断充电的群体，尤其是前端这个不断发展的行业。业余时间被占用后，导致没有时间来进行自我充...
-                
-            </p>
-            
-            <p class="read-more">
-                <a data-pjax href="/2017/02/05/2017年新的展望/"
-                   class="excerpt-link">阅读全文 »</a>
-            </p>
-            
+        </div>
+    </span>
+
+        <section class="post-content">
+            <p>之前看到锤子手机网站页面上的banner，觉得效果特别炫，于是参考了网上的一些资料和能够看到的源码，自己尝试制作了这种3d悬浮效果的样式。<br><a href="http://www.smartisan.com/cn/#/home" target="_blank" rel="external">原始效果链接</a></p>
+<p>其中最核心的样式是css3中的3D转换rotateX()、rotateY()，就是以其X轴或者Y轴以给定的度数进行旋转。</p>
+<p>这里使用vue来进行事件绑定。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"banner-3d"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"banner"</span> <span class="attr">v-on:mousemove</span>=<span class="string">"mouseIn"</span> <span class="attr">v-on:mouseleave</span>=<span class="string">"mouseleave"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>绑定的事件<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Vue(&#123;</div><div class="line">  <span class="attr">el</span>: <span class="string">'#banner'</span>,</div><div class="line">  <span class="attr">methods</span>:&#123;</div><div class="line">    <span class="attr">mouseIn</span>:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">      <span class="keyword">let</span> offsetX = event.target.offsetWidth/<span class="number">2</span>;</div><div class="line">      <span class="keyword">let</span> offsetY = event.target.offsetHeight/<span class="number">2</span>;</div><div class="line">      <span class="keyword">let</span> x = event.offsetX - offsetX;</div><div class="line">      <span class="keyword">let</span> y = event.offsetY - offsetY;</div><div class="line">      <span class="keyword">let</span> xd = x/offsetX * <span class="number">10</span>;</div><div class="line">      <span class="keyword">let</span> yd = -y/offsetY * <span class="number">10</span>;</div><div class="line">      </div><div class="line">      event.target.style.transform = <span class="string">`rotateX(<span class="subst">$&#123;yd&#125;</span>deg) rotateY(<span class="subst">$&#123;xd&#125;</span>deg)`</span>;</div><div class="line">    &#125;,</div><div class="line">    <span class="attr">mouseleave</span>:<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">      event.target.style.transform = <span class="string">''</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<p>这里用event.offsetX event.offsetY用来获得触发事件的对象的x，y坐标。<br>用event.target.offsetWidth 和 event.target.offsetHeight来获取触发事件对象的宽度和高度。<br>通过进行相应的计算之后，以banner的中心为坐标原点，获得了鼠标移动位置的x，y坐标。<br>最后进行了相应的rotateX rotateY的3D转换就行了。</p>
+<p>源码地址和效果请看 <a href="http://js.jirengu.com/husi/7/edit?output" target="_blank" rel="external">这里</a></p>
+
         </section>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
+            
+            <a data-pjax class="newer-posts" href="/2017/02/05/2017年新的展望/">上一篇</a>
+            
+            
+            <a data-pjax class="older-posts" href="/2016/10/05/webpack学习指南2/">下一篇</a>
+            
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
+        </section>
+
+
     </article>
-    
-    <nav class="pagination" role="pagination">
-        
-        <span class="page-number">Page 1 of 1</span>
-        
-    </nav>
 </main>
 
   					<footer class="site-footer">
