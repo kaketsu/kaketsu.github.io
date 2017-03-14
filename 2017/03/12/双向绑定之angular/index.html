@@ -1,0 +1,245 @@
+<!-- 基础模板，默认所有页面的模板都由此开始 -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>华球球的博客</title>
+		<meta name="description" content="Multi-Level Push Menu"/>
+		<meta name="author" content="heredom" />
+		<link rel="shortcut icon" href="../favicon.ico">
+		<link rel="stylesheet" type="text/css" href="/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="/css/screen.css" />
+  		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<!-- Push Wrapper -->
+			<div class="mp-pusher" id="mp-pusher">
+
+				<!-- mp-menu -->
+				<nav id="mp-menu" class="mp-menu">
+					<div class="mp-level">
+						<div class="home-intro">
+							<h2>
+								华球球
+							</h2>
+							<p>我从来不是一个一无所能就能明辨是非的人</p>
+						</div>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-archive" style="padding-right:15px;"></i>归档</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>归档</h2>
+									</div>
+									<ul>
+										<form id="search-form" action="">
+											<input type="text" class="search search-archive" placeholder="Search.."/>
+										</form>
+										
+										<li class="search-archive-li">
+											<a href="/2017/03/12/双向绑定之angular/">双向绑定之angular</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2017/02/21/yarn中文文档来了/">yarn中文文档来了</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2017/02/05/2017年新的展望/">2017年新的展望</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/12/18/3D悬浮效果/">网站页面3D悬浮效果</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/10/05/webpack学习指南2/">webpack学习指南2</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/10/04/webpack学习指南/">webpack学习指南</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/09/15/用vue来构建项目(2)/">用vue来构建项目2</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/09/14/用vue来构建项目/">用vue来构建项目</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2016/02/16/Markdown常用语法/">Markdown常用语法</a>
+										</li>
+										
+										<li class="search-archive-li">
+											<a href="/2015/11/06/hello-world/">Hello World</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-bookmark" style="padding-right:15px;"></i>分类</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>分类</h2>
+									</div>
+									<ul>
+										
+										<li>
+											<a href="/categories/web前端/">&nbsp;&nbsp;&nbsp;web前端</a>
+										</li>
+										
+										<li>
+											<a href="/categories/随笔/">&nbsp;&nbsp;&nbsp;随笔</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-tags" style="padding-right:15px;"></i>标签</a>
+								<div class="mp-level">
+									<div class="home-intro">
+										<h2>标签</h2>
+									</div>
+									<ul>
+										
+										<li>
+											<a href="/tags/Yarn/">&nbsp;&nbsp;&nbsp;Yarn</a>
+										</li>
+										
+										<li>
+											<a href="/tags/vue/">&nbsp;&nbsp;&nbsp;vue</a>
+										</li>
+										
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="/about"><i class="fa fa-user" style="padding-right:15px;"></i>关于我</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<!-- /mp-menu -->
+
+				<div class="scroller"><!-- this is for emulating position fixed of the nav -->
+					<div class="scroller-inner">
+						<!-- Top Navigation -->
+						<div class="content clearfix">
+							<div class="block clearfix">
+								<p>
+									<a href="#" id="trigger" class="menu-trigger">
+									</a>
+									<a href="/" id="nexus-back">华球球的博客</a>
+								</p>
+							</div>
+						</div>
+					</div><!-- /scroller-inner -->
+						
+
+						
+<!-- -->
+<!--<body class="post-template">-->
+<!---->
+  
+
+<main class="content" role="main">
+    <article class="post" >
+    <span class="post-meta">
+        <h1 class="post-title" style="margin: 14px 0;color:#50585D">双向绑定之angular</h1>
+        <div class="post-meta">
+            发表于
+            <time datetime="2017-03-11T16:00:00.000Z"
+                    itemprop="datePublished">2017-03-12</time>
+            | 分类于 
+            <div class="tag-tile" style="display:inline-block;">
+                
+                
+                <a data-pjax href='/categories/web前端/'>web前端</a>
+                
+                
+            </div>
+        </div>
+    </span>
+
+        <section class="post-content">
+            <p>最近面试的时候经常被问到如何实现一个双向数据绑定功能，所以这里自己组织归纳一下现在市面上框架的双向数据绑定功能，并且自己尝试着实现一下。</p>
+<p>双向绑定就意味着：</p>
+<blockquote>
+<p>1、视图层传向数据层：V发生改变，M也发生改变<br>2、数据层传向视图层：M发生改变，V也发生改变</p>
+</blockquote>
+<h3 id="构建自己的scope"><a href="#构建自己的scope" class="headerlink" title="构建自己的scope"></a>构建自己的scope</h3><p>在angular每个作用域中都有自己的scope对象，这个scope来绑定数据，所以我们先构建自己的scope。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Scope</span>(<span class="params"></span>) </span>&#123;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> $scope = <span class="keyword">new</span> Scope();</div><div class="line">$scope.firstName = <span class="string">'Qiu'</span>;</div><div class="line">$scope.lastName = <span class="string">'Hua'</span>;</div></pre></td></tr></table></figure>
+<h3 id="监控对象属性：-watch"><a href="#监控对象属性：-watch" class="headerlink" title="监控对象属性：$watch"></a>监控对象属性：$watch</h3><p>$watch和$digest是相辅相成的。两者一起，构成了Angular作用域的核心：数据变化的响应。</p>
+<p>使用$watch，可以在Scope上添加一个监听器。当Scope上发生变更时，监听器会收到提示。给$watch指定如下两个函数，就可以创建一个监听器：<br>一个监控函数，用于指定所关注的那部分数据，用于获取监控的值。<br>一个监听函数，用于在数据变更的时候接受提示。也就是当数据发生变化的时候，进行操作。</p>
+<p>为了实现$watch，我们需要存储注册过的所有监听器，这里用一个数组来存放所有的监听器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Scope</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.$$watchers = [];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>下面定义$watch函数，这个函数接收两个参数，我们把它存储在$$watchers数组中进行保存，同时因为Scope的$watch需要进行复用，所有把函数定义在原型链中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Scope.prototype.$watch = <span class="function"><span class="keyword">function</span>(<span class="params">watchFn, listenerFn</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> watcher = &#123;</div><div class="line">    <span class="attr">lastValue</span>:<span class="string">''</span>,</div><div class="line">    <span class="attr">watchFn</span>: watchFn,</div><div class="line">    <span class="attr">listenerFn</span>: listenerFn</div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">this</span>.$$watchers.push(watcher);</div><div class="line">&#125;;</div></pre></td></tr></table></figure></p>
+<h3 id="digest"><a href="#digest" class="headerlink" title="$digest"></a>$digest</h3><p>下面用$digest来执行所有的scope上面的监听器。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Scope.prototype.$digest = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">this</span>.$$watchers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    watch.listenerFn();</div><div class="line">  &#125;);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h3 id="进行脏值检测"><a href="#进行脏值检测" class="headerlink" title="进行脏值检测"></a>进行脏值检测</h3><p>这是监控函数(watchFn)的一般形式：从作用域获取一些值，然后返回。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">scope</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> scope.name;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>$digest函数的作用是调用监控函数(watchFn)，并且比较它返回的值和上一次返回值的差异。如果不相同，监听器就是脏的，它的监听函数(lintenerFn)就应当被调用。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Scope.prototype.$digest = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">  <span class="keyword">this</span>.$$watchers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> newValue = watch.watchFn(self);  <span class="comment">//调用监控函数</span></div><div class="line">    <span class="keyword">var</span> oldValue = watch.lastValue;</div><div class="line">    <span class="keyword">if</span> (newValue !== oldValue) &#123;</div><div class="line">      watch.listenerFn(newValue, oldValue, self); <span class="comment">//调用监听函数</span></div><div class="line">    &#125;</div><div class="line">    watch.lastValue = newValue;</div><div class="line">  &#125;)</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>对每个监听器，我们调用监控函数(watchFn)，把作用域自身当作实参传递进去，然后比较这个返回值和上次返回值，如果不同，就调用监听函数(lintenerFn)。<br>方便起见，我们把新旧值和作用域都当作参数传递给监听函数(lintenerFn)。最终，我们把监听器的last属性设置成新返回的值，下一次可以用它来作比较。</p>
+<p>综上，我们已经实现了Angular作用域的本质：添加监听器，在digest里运行它们。</p>
+<h3 id="当数据脏的时候持续Digest"><a href="#当数据脏的时候持续Digest" class="headerlink" title="当数据脏的时候持续Digest"></a>当数据脏的时候持续Digest</h3><p>我们需要改变一下digest，让它持续遍历所有监听器，直到监控的值停止变更。</p>
+<p>所有我们把digest改名为digestOnce，它把所有的监听器运行一次，返回一个布尔值，表示是否还有变更了：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">Scope.prototype.$$digestOnce = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> self  = <span class="keyword">this</span>;</div><div class="line">  <span class="keyword">var</span> dirty;</div><div class="line">  <span class="keyword">this</span>.$$watchers.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">watch</span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> newValue = watch.watchFn(self);</div><div class="line">    <span class="keyword">var</span> oldValue = watch.last;</div><div class="line">    <span class="keyword">if</span> (newValue !== oldValue) &#123;</div><div class="line">      watch.listenerFn(newValue, oldValue, self);</div><div class="line">      dirty = <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">    watch.last = newValue;</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> dirty;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>把digest函数改为：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">Scope.prototype.$digest = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> dirty;</div><div class="line">  <span class="keyword">do</span> &#123;</div><div class="line">    dirty = <span class="keyword">this</span>.$$digestOnce();</div><div class="line">  &#125; <span class="keyword">while</span> (dirty);</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p>这下当我们运行digest的时候，只要有数据是dirty的时候，digest会持续的运行遍历查找脏数据，直到数据稳定不再发生改变之后。</p>
+<p>但是，我们把digest的运行控制在一个可接受的迭代数量内，如果在这个次数之内，作用域中的值还在变化，那我们就不再进行digest，宣布这个值一直在进行变化。</p>
+<p>这样就实现了angular中基本的watch 和 digest模型。</p>
+
+        </section>
+        <hr/>
+        <nav class="pagination" style="width:auto" role="pagination">
+            
+            <a style="cursor:default" class="newer-posts" href="#"></a>
+            
+            
+            <a data-pjax class="older-posts" href="/2017/02/21/yarn中文文档来了/">下一篇</a>
+            
+        </nav>
+        <br/>
+        <br/>
+        <section id="comment">
+            <div id="comment-box"></div>
+        </section>
+
+
+    </article>
+</main>
+
+  					<footer class="site-footer">
+						<div class="inner">
+							<section class="copyright"><a href="/"></a> &copy; 华球球的博客 2016</section>
+							<section class="poweredby">由<a target="_blank" href="http://hexo.io/">Hexo   </a>发布 | 主题为 <a target="_blank" href="https://github.com/yuche/hexo-theme-kael">heredom</a></section>
+						</div>
+					</footer>
+				</div><!-- /scroller -->
+
+			</div><!-- /pusher -->
+		</div><!-- /container -->
+	</body>
+</html>
+  <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.quicksearch/2.3.1/jquery.quicksearch.min.js"></script>
+<script type="text/javascript" src="/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/js/classie.js"></script>
+<script type="text/javascript" src="/js/mlpushmenu.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+</body>
+</html>
